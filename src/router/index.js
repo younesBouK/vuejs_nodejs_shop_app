@@ -11,23 +11,18 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/shops',
-      name: 'HelloWorld',
+      path: '/',
+      name: 'Home',
       component: Shops
     },
     {
-      path: '/nearby-shops',
-      name: 'HelloWorld',
-      component: NearbyShops
-    },
-    {
-      path: '/prefered-shops',
-      name: 'HelloWorld',
-      component: PreferedShops
+      path: '/shops',
+      name: 'Shops',
+      component: Shops
     },
     {
       path: '/sign',
-      name: 'HelloWorld',
+      name: 'Sign',
       component: Sign
     }
   ]
