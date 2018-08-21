@@ -5,12 +5,13 @@
     <!-- top menu -->
     <div class="ui   menu">
       <div class="left floated item">
+        <i class="user icon"></i>
         {{user.email}}
       </div>
       <div class="right menu">
         <a class="item active" id="nearby" @click="select('nearby')" title="Nearby shops" >Nearby shops</a>
-        <a class="item" id="prefered" @click="select('prefered')" title="Prefered shops" >Prefered shops</a>
-        <a class="item" @click="logout" title="Log out" >LogOut</a>
+        <a class="item" id="prefered" @click="select('prefered')" title="Prefered shops" ><i class="favorite icon"></i> Prefered shops</a>
+        <a class="item" @click="logout" title="Log out" ><i class="logout icon"></i> LogOut</a>
       </div>
     </div>
 
@@ -46,7 +47,11 @@
         }
       },
       mounted(){
-
+        if(!this.$store.state.user){
+          this.$router.push("/sign");
+        }else{
+          this.$router.push("/shops");
+        }
       },
       methods: {
         select(id){
