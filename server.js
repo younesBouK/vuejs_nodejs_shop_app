@@ -99,7 +99,6 @@ app.post('/nearby_shops',urlencodedParser, function (req, res) {
 
   // eliminate disliked shops
   app.locals.dislike_shops.forEach((item,index)=>{
-    console.log(index)
     if(item.time<(Date.now()-two_hours)){
       app.locals.dislike_shops.splice(index,1)
     }else if(item.user_id===query.user_id){
