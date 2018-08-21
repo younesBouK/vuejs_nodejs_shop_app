@@ -118,6 +118,8 @@
       }
     },
     mounted() {
+      if(this.$store.state.user)
+        this.$router.push("/shops");
 
     }
   }

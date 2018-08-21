@@ -4,7 +4,7 @@
 
     <!-- top menu -->
     <div class="ui   menu">
-      <div class="left floated item">
+      <div class="left floated item" v-if="user">
         <i class="user icon"></i>
         {{user.email}}
       </div>
